@@ -42,5 +42,30 @@ vagrant up
 ![Etape 8](https://github.com/Bouquet2/template-django-project/blob/master/images/ressources_readme/pycharm6.png)
 
 
+### Commandes
 
+```
+# Démarrrer la VM
+vagrant up
+
+# Eteindre la VM 
+vagrant halt
+
+# Supprimer la VM
+vagrant destroy
+
+# Se connecter en ssh à la VM
+vagrant ssh
+
+# Lancez le serveur Django manuellement
+vagrant ssh -c "/usr/bin/python3.5 -u /vagrant/moulinette/manage.py runserver
+
+# Lancez les migrations manuellement
+vagrant ssh -c "/usr/bin/python3.5 -u /vagrant/moulinette/manage.py migrate"
+vagrant ssh -c "/usr/bin/python3.5 -u /vagrant/moulinette/manage.py makemigrations"
+
+# Vous pouvez aussi lancer le script pour faire cela automatiquement
+chmod +x migrate_database.sh
+./migrate_database.sh
+```
 
