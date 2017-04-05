@@ -11,3 +11,8 @@ cd template-django-project
 vagrant up
 ```
 
+### Développer avec Pycharm
+
+[Télécharger pycharm](https://www.jetbrains.com/pycharm/download)
+
+
