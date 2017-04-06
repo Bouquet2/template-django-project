@@ -64,8 +64,8 @@ apt-get install -y docker
 # TODO installation des librairies latex (lesquelles ?)
 
 # Mise à jour de la base de données
-/usr/bin/python3.5 /vagrant/moulinette/manage.py makemigrations
-/usr/bin/python3.5 /vagrant/moulinette/manage.py migrate
+/usr/bin/python3.5 /vagrant/manage.py makemigrations
+/usr/bin/python3.5 /vagrant/manage.py migrate
 
 # Create user admin
 echo "from django.contrib.auth.models import User; User.objects.filter(email='$admin_email').delete(); User.objects.create_superuser('$admin_user', '$admin_email', '$admin_pwd')" |/usr/bin/python3.5 /vagrant/moulinette/manage.py shell
