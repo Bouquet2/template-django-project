@@ -68,7 +68,7 @@ apt-get install -y docker
 /usr/bin/python3.5 /vagrant/manage.py migrate
 
 # Create user admin
-echo "from django.contrib.auth.models import User; User.objects.filter(email='$admin_email').delete(); User.objects.create_superuser('$admin_user', '$admin_email', '$admin_pwd')" |/usr/bin/python3.5 /vagrant/moulinette/manage.py shell
+echo "from django.contrib.auth.models import User; User.objects.filter(email='$admin_email').delete(); User.objects.create_superuser('$admin_user', '$admin_email', '$admin_pwd')" |/usr/bin/python3.5 /vagrant/manage.py shell
 
 
 print_help
