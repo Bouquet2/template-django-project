@@ -58,11 +58,11 @@ vagrant destroy
 vagrant ssh
 
 # Lancez le serveur Django manuellement
-vagrant ssh -c "/usr/bin/python3.5 -u /vagrant/moulinette/manage.py runserver
+vagrant ssh -c "/usr/bin/python3.5 -u /vagrant/manage.py runserver
 
 # Lancez les migrations manuellement
-vagrant ssh -c "/usr/bin/python3.5 -u /vagrant/moulinette/manage.py makemigrations"
-vagrant ssh -c "/usr/bin/python3.5 -u /vagrant/moulinette/manage.py migrate"
+vagrant ssh -c "/usr/bin/python3.5 -u /vagrant/manage.py makemigrations"
+vagrant ssh -c "/usr/bin/python3.5 -u /vagrant/manage.py migrate"
 
 # Vous pouvez aussi lancer le script pour faire cela automatiquement
 chmod +x migrate_database.sh
