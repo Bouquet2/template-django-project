@@ -1,7 +1,7 @@
 #/usr/bin/env bash
 
 admin_user="admin"
-admin_pwd="moulinette"
+admin_pwd="password"
 admin_email="$admin_user@example.com"
 
 print_help () {
@@ -57,12 +57,6 @@ ALTER ROLE $DB_USER SET timezone TO 'UTC';
 GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO $DB_USER;
 ALTER USER $DB_USER CREATEDB;
 EOF
-
-# Installation de Docker
-apt-get install -y docker
-
-# Installation de latex
-# TODO installation des librairies latex (lesquelles ?)
 
 # Mise à jour de la base de données
 /usr/bin/python3.5 /vagrant/manage.py makemigrations
